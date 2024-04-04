@@ -1198,26 +1198,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NathaponPonnakarn\\.nuget\\packages\\": {}
+    "/Users/paxwell/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NathaponPonnakarn\\source\\repos\\firstapp\\firstapp\\firstapp.csproj",
+      "projectUniqueName": "/Users/paxwell/Desktop/backendcsharp/csharp-api/firstapp/firstapp.csproj",
       "projectName": "firstapp",
-      "projectPath": "C:\\Users\\NathaponPonnakarn\\source\\repos\\firstapp\\firstapp\\firstapp.csproj",
-      "packagesPath": "C:\\Users\\NathaponPonnakarn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NathaponPonnakarn\\source\\repos\\firstapp\\firstapp\\obj\\",
+      "projectPath": "/Users/paxwell/Desktop/backendcsharp/csharp-api/firstapp/firstapp.csproj",
+      "packagesPath": "/Users/paxwell/.nuget/packages/",
+      "outputPath": "/Users/paxwell/Desktop/backendcsharp/csharp-api/firstapp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\NathaponPonnakarn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/paxwell/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1269,7 +1267,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{DFF2BA69-B9D8-4DF9-BDA2-5B3DAAA88E23}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="firstapp/Program.cs">
+    <Files>
+      <File FileName="../../../.Trash/dotnet-sdk-8.0.203-osx-x64.pkg" />
+      <File FileName="firstapp/WeatherForecast.cs" Line="1" Column="1" />
+      <File FileName="firstapp/firstapp.http" Line="1" Column="1" />
+      <File FileName="firstapp/Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="firstapp">
+            <Node name="firstapp" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.firstapp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

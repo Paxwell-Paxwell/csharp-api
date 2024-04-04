@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using MongoDB.Bson;
 using firstapp.Data;
-
+using System.Threading.Tasks;
 namespace firstapp.Controllers
+
 {
     [ApiController]
     [Route("[controller]")]
@@ -14,27 +15,40 @@ namespace firstapp.Controllers
     {
         private readonly MongoDBContext _context;
 
-        public VoteController(IMongoDatabase database)
+        public VoteController(MongoDBContext context)
         {
-            _voteCollection = database.GetCollection<Vote>("Votes");
+            _context = context;
         }
 
         [HttpPost]
-        public IActionResult CreateVote(Vote vote)
+        public async Task<ActionResult<Vote>> CreateVote(Vote vote)
         {
-            _voteCollection.InsertOne(vote);
-            return CreatedAtAction(nameof(GetVote), new { id = vote.Id.ToString() }, vote);
+            await _context.Votes.InsertOneAsync(vote);
+            return CreatedAtRoute( new { id = vote.Id }, vote);
         }
-
-        [HttpGet("{id:length(24)}", Name = "GetVote")]
-        public ActionResult<Vote> GetVote(string id)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Vote>> GetVote(string id)
         {
-            var vote = _voteCollection.Find<Vote>(vote => vote.Id == ObjectId.Parse(id)).FirstOrDefault();
+            var vote = await _context.Votes.Find(p => p.Id ==id).FirstOrDefaultAsync();
+
             if (vote == null)
             {
                 return NotFound();
             }
+
             return vote;
+        }
+        
+        [HttpGet]
+        public async Task<ActionResult<List<Vote>>> GetAll(int page = 1, int pageSize = 10)
+        {
+            var skip = (page - 1) * pageSize;
+            var votes = await _context.Votes.Find(_ => true)
+                                            .Skip(skip)
+                                            .Limit(pageSize)
+                                            .ToListAsync();
+
+            return votes;
         }
 
         // Add more methods as needed

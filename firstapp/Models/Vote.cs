@@ -6,7 +6,8 @@
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public ObjectId Id { get; set; }
+        public string Id { get; set; } // Now directly a string for simplicity
+
 
         [BsonElement("Topic")]
         public string Topic { get; set; }
